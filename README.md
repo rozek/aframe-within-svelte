@@ -21,7 +21,7 @@ A-Frame has an [entity-component-system](https://aframe.io/docs/1.3.0/introducti
 <tr><td>System</td><td>the business logic behind these "props"</td></tr>
 </tbody></table>
 
-In an object-oriented world, ECS components contain the data of a "mixin" or (in case of multiple inheritance) a single superclass, whereas a system contains the mixin's oe superclass's implementation. ECS "entities" then simply represent instances of (classes inheriting from) these mixins or superclasses without any own data or business logic.
+In an object-oriented world, ECS "components" contain the data of a mixin or (in case of multiple inheritance) a single superclass, whereas a "system" contains the mixin's or superclass's implementation. ECS "entities" then simply represent instances of (classes inheriting from) these mixins or superclasses without any own data or business logic.
 
 ## License ##
 
