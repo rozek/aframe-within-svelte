@@ -31,6 +31,8 @@ In an object-oriented world, ECS "components" contain the data of a mixin or (in
 
 ## Implementing an A-Frame Primitive within Svelte ##
 
+## Using a Svelte Component as A-Frame Entity ##
+
 ## License ##
 
 [MIT License](LICENSE.md)
