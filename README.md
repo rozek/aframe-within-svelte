@@ -17,7 +17,7 @@ A-Frame has an [entity-component-system](https://aframe.io/docs/1.3.0/introducti
 <table><tbody>
 <tr><th>A-Frame</th><th>Svelte</th></tr>
 <tr><td>Entity</td><td>similar to a Svelte Component</td></tr>
-<tr><td>Component</td><td>similar to (exported) Svelte "props"</td></tr>
+<tr><td>Component</td><td>similar to Svelte "props"</td></tr>
 <tr><td>System</td><td>the business logic behind these "props"</td></tr>
 </tbody></table>
 
