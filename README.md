@@ -4,7 +4,7 @@ some notes on how to use A-Frame within a Svelte Application
 
 [A-Frame](https://github.com/aframevr/aframe) is a framework for creating "virtual reality experiences" in the same way as "ordinary" web pages: by means of HTML elements with attributes and content. Under the hood, A-Frame uses the DOM only to manage the hierarchical description of a VR/AR "scene" and its "assets" (especially, without burdening the browser's layout engine) and then simply maps these elements to corresponding objects of the underlying [Three.js](https://github.com/mrdoob/three.js/) library.
 
-[Svelte](https://github.com/sveltejs/svelte) is a tool for building web applications from components which look and behave like custom HTML elements. Svelte accesses the DOM directly to manage elements and update attributes and content upon changes.
+[Svelte](https://github.com/sveltejs/svelte) is a tool for building web applications from components which look and behave like custom HTML elements. Svelte accesses the DOM directly to manage these elements and update their attributes and contents upon changes.
 
 While the underlying execution models of A-Frame and Svelte differ completely, their use of the DOM as a common data base ensures a fairly smooth interaction.
 
