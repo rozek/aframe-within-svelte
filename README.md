@@ -8,7 +8,7 @@ some notes on how to use A-Frame within a Svelte Application
 
 While the underlying execution models of A-Frame and Svelte differ completely, their use of the DOM as a common data base ensures a fairly smooth interaction.
 
-This repository illustrates how to integrate A-Frame entities, components and systems into a Svelte application - and how to use Svelte to implement custom A-Frame entities, components and systems.
+This repository illustrates how to integrate A-Frame entities, components and systems into a Svelte application - and how to use Svelte to implement custom A-Frame entities, components and systems. As you will see, it's quite simple.
 
 ### Teminology ###
 
