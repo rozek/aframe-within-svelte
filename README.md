@@ -12,7 +12,7 @@ This repository illustrates how to integrate A-Frame entities, components and sy
 
 ### Teminology ###
 
-A-Frame has an [entity-component-system](https://aframe.io/docs/1.3.0/introduction/entity-component-system.html) (ECS) architecture. As a consequence, it is _very_ important to keep in mind, that an A-Frame "component" is something completely different than a Svelte "component". The following table tries to give a rough mapping between A-Frame "Entities", "Components" and "Systems" and their Svelte counterparts:
+A-Frame has an [entity-component-system](https://aframe.io/docs/1.3.0/introduction/entity-component-system.html) (ECS) architecture. As a consequence, an A-Frame "component" is something completely different than a Svelte "component". The following table tries to give a rough mapping between A-Frame "Entities", "Components" and "Systems" and their Svelte counterparts:
 
 <table>
 </table>
