@@ -188,6 +188,8 @@ and import it into your Svelte application where it may be used like any other A
 
 ## Using a Svelte Component as an A-Frame Entity ##
 
+Svelte may also be used to implement new A-Frame entities in order to benefit from Svelte features like [stores](https://svelte.dev/tutorial/writable-stores), [actions](https://svelte.dev/tutorial/actions), [contexts](https://svelte.dev/tutorial/context-api) and [component composition](https://svelte.dev/tutorial/slots).
+
 ## License ##
 
 [MIT License](LICENSE.md)
