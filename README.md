@@ -80,8 +80,39 @@ Even better: Svelte's reactivity mechanisms work as usual:
 
 Note: while the rotation animation shown above works (and illustrates that you don't have to synchronize your business logic with the 3D rendering loop) using A-Frame's `animation` component should be preferred.
 
-
 ## Implementing an A-Frame Component within Svelte ##
+
+A-Frame provides a mechanism for [adding new "components"](https://aframe.io/docs/1.3.0/introduction/writing-a-component.html) - this mechanism still works within a Svelte application.
+
+Just implement the new A-Frame component in a separate JavaScript (or TypeScript) file:
+
+```javascript
+  import "aframe"
+
+  AFRAME.registerComponent('a-svelte-component',{
+    ... // add your specification and implementation here
+  })
+```
+
+and import it into your Svelte application. From then on it may be added to A-Frame elements as usual:
+
+```html
+<script context="module">
+  import "aframe"
+  import "./aframe-component.js"
+</script>
+
+<a-scene>
+  <a-sky color="#ECECEC"/>
+
+  <a-box a-svelte-component="..." color="#4CC3D9"
+      position="0 0.5 -3" rotation="0 {Angle} 0"/>
+
+  <a-plane width="4" height="4" color="#7BC8A4"
+    position="0 0 -4" rotation="-90 0 0"
+  />
+</a-scene>
+```
 
 ## Implementing an A-Frame System within Svelte ##
 
