@@ -41,8 +41,20 @@ Within a Svelte file, you then just import A-Frame like so:
 
 Two remarks seem appropriate:
 
-* importing A-Frame will blow up your final JavaScript distribution file by more than 2 MB - that's ok since A-Frame is not "tree shakeable" yet and there seem to be [no plans to make it tree-shakeable](https://github.com/aframevr/aframe/issues/4242) in the near future
+* importing A-Frame will blow up your final JavaScript distribution file by more than 2 MB - that's ok since A-Frame is not "tree-shakeable" yet and there seem to be [no plans to make it tree-shakeable](https://github.com/aframevr/aframe/issues/4242) in the near future
 * since A-Frame actually expects to be included by a `<script>` element in the `<head>` section of an HTML document, it issues a _warning_ in the browser console if this is not the case - just ignore this warning...
+
+After having imported A-Frame, its elements may be used like any other HTML element in a Svelte application:
+
+```html
+<a-scene a-svelte-system>
+  <a-sky color="#ECECEC"/>
+  <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+  <a-plane width="4" height="4" color="#7BC8A4"
+    position="0 0 -4" rotation="-90 0 0"
+  />
+</a-scene>
+```
 
 ## Implementing an A-Frame Component within Svelte ##
 
