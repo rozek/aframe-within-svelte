@@ -47,7 +47,7 @@ Two remarks seem appropriate:
 After having imported A-Frame, its elements may be used like any other HTML element in a Svelte application:
 
 ```html
-<a-scene a-svelte-system>
+<a-scene>
   <a-sky color="#ECECEC"/>
   <a-box color="#4CC3D9" position="0 0.5 -3" rotation="0 45 0"></a-box>
   <a-plane width="4" height="4" color="#7BC8A4"
