@@ -39,6 +39,8 @@ This repository contains files for an example which demonstrates all mechanisms 
 
 While the example also exists in the [Svelte REPL](https://svelte.dev/repl/43f54b1b2ab34533a69c363067194d2d), the mechanisms behind this REPL currently seem to be incompatible with A-Frame - the example therefore refuses to start.
 
+Just build the example offline instead and run it locally on your own computer.
+
 ## Using A-Frame in a Svelte Application ##
 
 Assuming that you are following the usual workflow for Svelte applications (which finally runs [Rollup](https://rollupjs.org/guide/en/) or [WebPack](https://webpack.js.org/) to bundle a set of modules into an optimized JavaScript distribution), everything starts by installing A-Frame as such a module:
