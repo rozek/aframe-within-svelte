@@ -156,7 +156,7 @@ and import it into your Svelte application. From then on it may be added to A-Fr
 
 You may even [implement new A-Frame "primitives"](https://aframe.io/docs/1.3.0/introduction/html-and-primitives.html) within Svelte.
 
-As before, implement the new A-Frame primitive in a separate JavaScript (or TypeScript) file:
+As before, implement the primitive in a separate JavaScript (or TypeScript) file:
 
 ```javascript
 import "aframe"
