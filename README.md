@@ -23,6 +23,18 @@ A-Frame has an [entity-component-system](https://aframe.io/docs/1.3.0/introducti
 
 In an object-oriented world, ECS "components" contain the data of a mixin or (in case of multiple inheritance) a single superclass, whereas a "system" contains the mixin's or superclass's implementation. ECS "entities" then simply represent instances of (classes inheriting from) these mixins or superclasses without any own data or business logic.
 
+### Example ###
+
+This repository contains files for an example which demonstrates all mechanisms described below:
+
+* [`aframe-component.js`](./aframe-component.js) - implements an A-Frame "component"
+* [`aframe-system.js`](./aframe-system.js) - implements an A-Frame "system" (and its associated "component")
+* [`aframe-primitive.js`](./aframe-primitive.js) - implements an A-Frame "primitive"
+* [`AFrameEntity.svelte`](./AFrameEntity.svelte) - implements a Svelte component which acts like an A-Frame "entity"
+* [`App.svelte`](./App.svelte) - contains the Svelte application which uses all modules shown above
+
+`aframe-component.js` and `aframe-system.js` log invocations of their lifecycle method on the browser console - thus, make sure to open the browser's developer tools and watch the console.
+
 ## Using A-Frame in a Svelte Application ##
 
 Assuming that you are following the usual workflow for Svelte applications (which finally runs [Rollup](https://rollupjs.org/guide/en/) or [WebPack](https://webpack.js.org/) to bundle a set of modules into an optimized JavaScript distribution), everything starts by installing A-Frame as such a module:
