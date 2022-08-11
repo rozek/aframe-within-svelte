@@ -49,7 +49,7 @@ After having imported A-Frame, its elements may be used like any other HTML elem
 ```html
 <a-scene a-svelte-system>
   <a-sky color="#ECECEC"/>
-  <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+  <a-box color="#4CC3D9" position="0 0.5 -3" rotation="0 45 0"></a-box>
   <a-plane width="4" height="4" color="#7BC8A4"
     position="0 0 -4" rotation="-90 0 0"
   />
