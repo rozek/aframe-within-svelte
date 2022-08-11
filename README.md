@@ -79,7 +79,7 @@ Even better: Svelte's reactivity mechanisms work as usual:
 </a-scene>
 ```
 
-Note: while the rotation animation shown above works (and illustrates that you don't have to synchronize with the 3D rendering loop) using A-Frame's `animation` component should be preferred.
+Note: while the rotation animation shown above works (and illustrates that you don't have to synchronize your business logic with the 3D rendering loop) using A-Frame's `animation` component should be preferred.
 
 
 ## Implementing an A-Frame Component within Svelte ##
