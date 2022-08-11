@@ -186,7 +186,7 @@ and import it into your Svelte application where it may be used like any other A
 </a-scene>
 ```
 
-## Using a Svelte Component as A-Frame Entity ##
+## Using a Svelte Component as an A-Frame Entity ##
 
 ## License ##
 
