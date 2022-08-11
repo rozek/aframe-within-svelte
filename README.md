@@ -190,6 +190,44 @@ and import it into your Svelte application where it may be used like any other A
 
 Svelte may also be used to implement new A-Frame entities in order to benefit from Svelte features like [stores](https://svelte.dev/tutorial/writable-stores), [actions](https://svelte.dev/tutorial/actions), [contexts](https://svelte.dev/tutorial/context-api) and [component composition](https://svelte.dev/tutorial/slots).
 
+Just implement an ordinary Svelte component in a separate `.svelte` file and import A-Frame as usual:
+
+```html
+<script context="module">
+  import "aframe"
+</script>
+
+<script>
+  export let color = 'red'
+</script>
+
+<a-entity geometry="primitive:box" material="color:{color}"
+  {...$$restProps} />
+```
+
+Within the Svelte application you may then import and use the Svelte component as usual:
+
+```html
+<script context="module">
+  import "aframe"
+  import AFrameEntity from './AFrameEntity.svelte'
+</script>
+
+<script>
+  let color = 'blue'
+</script>
+
+<a-scene a-svelte-system>
+  <a-sky color="#ECECEC"/>
+
+  <AFrameEntity {color} position="0 0.5 -3" rotation="0 45 0"/>
+
+  <a-plane width="4" height="4" color="#7BC8A4"
+    position="0 0 -4" rotation="-90 0 0"
+  />
+</a-scene>
+```
+
 ## License ##
 
 [MIT License](LICENSE.md)
