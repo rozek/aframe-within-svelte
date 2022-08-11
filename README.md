@@ -39,11 +39,19 @@ Within a Svelte file, you _could_ then prinicpally just import A-Frame like so:
 </script>
 ```
 
-However, while this approach works fine, A-Frame unfortunately expects itself to be included by a `<script>` element in the `<head>` section of an HTML document and issues a _warning_ in the browser console if this is not the case.
+However, while this approach works fine, A-Frame unfortunately expects itself to be included by a `<script>` element in the `<head>` section of an HTML document and issues a _warning_ to the browser console if this is not the case.
 
+It might therefore look a bit better to explicitly load A-Frame into the Svelte application
 
+```html
+<svelte:head>
+  <script src="./node_modules/aframe/dist/aframe-v1.3.0.min.js"></script>
+</svelte:head>
+```
 
-Using a `<script>` element does not affect the loading performance of the final Svelte application too much as A-Frame is not "tree shakeable" yet and there seem to be [no plans to make it tree-shakeable](https://github.com/aframevr/aframe/issues/4242) in the near future.
+while all other JavaScript and Svelte files can stay with the simple `import "aframe"` statement.
+
+Using a `<script>` element does not affect the loading performance of the final Svelte application too badly as A-Frame is not "tree shakeable" yet and there seem to be [no plans to make it tree-shakeable](https://github.com/aframevr/aframe/issues/4242) in the near future.
 
 ## Implementing an A-Frame Component within Svelte ##
 
