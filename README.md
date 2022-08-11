@@ -49,7 +49,7 @@ After having imported A-Frame, its elements may be used like any other HTML elem
 ```html
 <a-scene>
   <a-sky color="#ECECEC"/>
-  <a-box color="#4CC3D9" position="0 0.5 -3" rotation="0 45 0"></a-box>
+  <a-box color="#4CC3D9" position="0 0.5 -3" rotation="0 45 0"/>
   <a-plane width="4" height="4" color="#7BC8A4"
     position="0 0 -4" rotation="-90 0 0"
   />
@@ -71,7 +71,7 @@ Even better: Svelte's reactivity mechanisms work as usual:
   <a-sky color="#ECECEC"/>
   {#if BoxIsVisible}
     <a-box color="#4CC3D9"
-      position="0 0.5 -3" rotation="0 {Angle} 0"></a-box>
+      position="0 0.5 -3" rotation="0 {Angle} 0"/>
   {/if}
   <a-plane width="4" height="4" color="#7BC8A4"
     position="0 0 -4" rotation="-90 0 0"
