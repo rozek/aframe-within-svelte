@@ -56,6 +56,32 @@ After having imported A-Frame, its elements may be used like any other HTML elem
 </a-scene>
 ```
 
+Even better: Svelte's reactivity mechanisms work as usual:
+
+```html
+<script>
+  let BoxIsVisible = false
+  setTimeout(() => { BoxIsVisible = true }, 5000)
+
+  let Angle = 45
+  setInterval(() => { Angle++ }, 100)
+</script>
+
+<a-scene a-svelte-system>
+  <a-sky color="#ECECEC"/>
+  {#if BoxIsVisible}
+    <a-box color="#4CC3D9"
+      position="0 0.5 -3" rotation="0 {Angle} 0"></a-box>
+  {/if}
+  <a-plane width="4" height="4" color="#7BC8A4"
+    position="0 0 -4" rotation="-90 0 0"
+  />
+</a-scene>
+```
+
+Note: while the rotation animation shown above works (and illustrates that you don't have to synchronize with the 3D rendering loop) using A-Frame's `animation` component should be preferred.
+
+
 ## Implementing an A-Frame Component within Svelte ##
 
 ## Implementing an A-Frame System within Svelte ##
