@@ -87,11 +87,11 @@ A-Frame provides a mechanism for [adding new "components"](https://aframe.io/doc
 Just [implement the new A-Frame component](https://aframe.io/docs/1.3.0/core/component.html) in a separate JavaScript (or TypeScript) file:
 
 ```javascript
-  import "aframe"
+import "aframe"
 
-  AFRAME.registerComponent('a-svelte-component',{
-    ... // add your specification and implementation here
-  })
+AFRAME.registerComponent('a-svelte-component',{
+  ... // add your specification and implementation here
+})
 ```
 
 and import it into your Svelte application. From then on it may be added to A-Frame elements as usual:
