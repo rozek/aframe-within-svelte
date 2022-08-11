@@ -116,6 +116,42 @@ and import it into your Svelte application. From then on it may be added to A-Fr
 
 ## Implementing an A-Frame System within Svelte ##
 
+A-Frame also provides a mechanism for adding new "systems" - and, again, this mechanism also works within a Svelte application.
+
+Just [implement the new A-Frame system]([https://aframe.io/docs/1.3.0/core/component.html](https://aframe.io/docs/1.3.0/core/systems.html)) in a separate JavaScript (or TypeScript) file:
+
+```javascript
+import "aframe"
+
+AFRAME.registerSystem('a-svelte-system',{
+  ... // add your specification and implementation here
+})
+
+AFRAME.registerComponent('a-svelte-system',{
+  ... // add your specification and implementation here
+})
+```
+
+and import it into your Svelte application. From then on it may be added to A-Frame as usual:
+
+```html
+<script context="module">
+  import "aframe"
+  import "./aframe-system.js"
+</script>
+
+<a-scene a-svelte-system="...">
+  <a-sky color="#ECECEC"/>
+
+  <a-box a-svelte-system="..." color="#4CC3D9"
+      position="0 0.5 -3" rotation="0 {Angle} 0"/>
+
+  <a-plane width="4" height="4" color="#7BC8A4"
+    position="0 0 -4" rotation="-90 0 0"
+  />
+</a-scene>
+```
+
 ## Implementing an A-Frame Primitive within Svelte ##
 
 ## Using a Svelte Component as A-Frame Entity ##
