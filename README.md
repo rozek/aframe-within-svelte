@@ -84,7 +84,7 @@ Note: while the rotation animation shown above works (and illustrates that you d
 
 A-Frame provides a mechanism for [adding new "components"](https://aframe.io/docs/1.3.0/introduction/writing-a-component.html) - this mechanism still works within a Svelte application.
 
-Just implement the new A-Frame component in a separate JavaScript (or TypeScript) file:
+Just [implement the new A-Frame component](https://aframe.io/docs/1.3.0/core/component.html) in a separate JavaScript (or TypeScript) file:
 
 ```javascript
   import "aframe"
