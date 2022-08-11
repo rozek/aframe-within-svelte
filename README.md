@@ -154,6 +154,8 @@ and import it into your Svelte application. From then on it may be added to A-Fr
 
 ## Implementing an A-Frame Primitive within Svelte ##
 
+You may even [implement new A-Frame "primitives"](https://aframe.io/docs/1.3.0/introduction/html-and-primitives.html) within Svelte.
+
 ## Using a Svelte Component as A-Frame Entity ##
 
 ## License ##
