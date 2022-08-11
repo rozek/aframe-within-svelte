@@ -37,7 +37,7 @@ This repository contains files for an example which demonstrates all mechanisms 
 
 ### Svelte REPL ###
 
-While the example also exists in the [Svelte REPL](https://svelte.dev/repl/43f54b1b2ab34533a69c363067194d2d), the mechanisms behind this REPL seem to be incompatible with A-Frame - the example therefore refuses to start.
+While the example also exists in the [Svelte REPL](https://svelte.dev/repl/43f54b1b2ab34533a69c363067194d2d), the mechanisms behind this REPL currently seem to be incompatible with A-Frame - the example therefore refuses to start.
 
 ## Using A-Frame in a Svelte Application ##
 
