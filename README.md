@@ -31,7 +31,7 @@ Assuming that you are following the usual workflow for Svelte applications (whic
 npm install --save aframe
 ```
 
-Within a Svelte file, you _could_ then prinicpally just import A-Frame like so:
+Within a Svelte file, you then just import A-Frame like so:
 
 ```html
 <script context="module">
@@ -39,19 +39,10 @@ Within a Svelte file, you _could_ then prinicpally just import A-Frame like so:
 </script>
 ```
 
-However, while this approach works fine, A-Frame unfortunately expects itself to be included as a `<script>` element in the `<head>` section of an HTML document and issues a _warning_ to the browser console if this is not the case.
+Two remarks seem appropriate:
 
-It might therefore look a bit better to explicitly load A-Frame into the Svelte application
-
-```html
-<svelte:head>
-  <script src="./node_modules/aframe/dist/aframe-v1.3.0.min.js"></script>
-</svelte:head>
-```
-
-while all other JavaScript and Svelte files can stay with the simple `import "aframe"` statement.
-
-Using a `<script>` element does not affect the loading performance of the final Svelte application too badly as A-Frame is not "tree shakeable" yet and there seem to be [no plans to make it tree-shakeable](https://github.com/aframevr/aframe/issues/4242) in the near future.
+* importing A-Frame will blow up your final JavaScript distribution file by more than 2 MB - that's ok since A-Frame is not "tree shakeable" yet and there seem to be [no plans to make it tree-shakeable](https://github.com/aframevr/aframe/issues/4242) in the near future
+* since A-Frame actually expects to be included by a `<script>` element in the `<head>` section of an HTML document, it issues a _warning_ in the browser console if this is not the case - just ignore this warning...
 
 ## Implementing an A-Frame Component within Svelte ##
 
