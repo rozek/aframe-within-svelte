@@ -25,6 +25,22 @@ In an object-oriented world, ECS "components" contain the data of a mixin or (in
 
 ## Using A-Frame in a Svelte Application ##
 
+Assuming that you are following the usual workflow for Svelte applications (which finally runs [Rollup](https://rollupjs.org/guide/en/) or [WebPack](https://webpack.js.org/) to bundle a set of modules into an optimized JavaScript distribution), everything starts by installing A-Frame as such a module:
+
+```bash
+npm install --save aframe
+```
+
+Within a Svelte file, you _could_ then prinicpally just import A-Frame like so:
+
+```html
+<script context="module">
+  import "aframe"
+</script>
+```
+
+While this approach works fine
+
 ## Implementing an A-Frame Component within Svelte ##
 
 ## Implementing an A-Frame System within Svelte ##
