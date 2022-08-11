@@ -106,7 +106,7 @@ and import it into your Svelte application. From then on it may be added to A-Fr
   <a-sky color="#ECECEC"/>
 
   <a-box a-svelte-component="..." color="#4CC3D9"
-      position="0 0.5 -3" rotation="0 {Angle} 0"/>
+    position="0 0.5 -3" rotation="0 {Angle} 0"/>
 
   <a-plane width="4" height="4" color="#7BC8A4"
     position="0 0 -4" rotation="-90 0 0"
@@ -144,7 +144,7 @@ and import it into your Svelte application. From then on it may be added to A-Fr
   <a-sky color="#ECECEC"/>
 
   <a-box a-svelte-system="..." color="#4CC3D9"
-      position="0 0.5 -3" rotation="0 {Angle} 0"/>
+    position="0 0.5 -3" rotation="0 {Angle} 0"/>
 
   <a-plane width="4" height="4" color="#7BC8A4"
     position="0 0 -4" rotation="-90 0 0"
@@ -155,6 +155,36 @@ and import it into your Svelte application. From then on it may be added to A-Fr
 ## Implementing an A-Frame Primitive within Svelte ##
 
 You may even [implement new A-Frame "primitives"](https://aframe.io/docs/1.3.0/introduction/html-and-primitives.html) within Svelte.
+
+As before, implement the new A-Frame primitive in a separate JavaScript (or TypeScript) file:
+
+```javascript
+import "aframe"
+
+AFRAME.registerPrimitive('a-svelte-primitive',{
+  defaultComponents: { /* ... */ },
+  mappings:          { /* ... */ }
+})
+```
+
+and import it into your Svelte application where it may be used like any other A-Frame element:
+
+```html
+<script context="module">
+  import "aframe"
+  import "./aframe-primitive.js"
+</script>
+
+<a-scene a-svelte-system="...">
+  <a-sky color="#ECECEC"/>
+
+  <a-svelte-primitive position="0 0.5 -3" rotation="0 {Angle} 0"/>
+
+  <a-plane width="4" height="4" color="#7BC8A4"
+    position="0 0 -4" rotation="-90 0 0"
+  />
+</a-scene>
+```
 
 ## Using a Svelte Component as A-Frame Entity ##
 
