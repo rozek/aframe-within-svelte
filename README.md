@@ -167,7 +167,7 @@ AFRAME.registerPrimitive('a-svelte-primitive',{
 })
 ```
 
-and import it into your Svelte application where it may be used like any other A-Frame element:
+and import it into your Svelte application where it may be used like any other A-Frame tag:
 
 ```html
 <script context="module">
